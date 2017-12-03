@@ -5,6 +5,8 @@ function centrosLoader(url) {
     var centroLayer;
     var marker;
     var marcadores = [];
+    var resultados = new Array();
+    var indice = 0;
     this.finishedLoad = false;
 
 
@@ -32,6 +34,9 @@ function centrosLoader(url) {
             console.log("Datos del Centro: "+centroMedico.showDetails());
 
             if (centroMedico.especialidad == tipo){
+
+              resultados[indice] = new Array(centroMedico.id, centroMedico.nombre, centroMedico.calle + centroMedico.numero, centroMedico.telefono, "10", centroMedico.horario);
+              indice ++;
 
               marker = L.marker([centroMedico.position.lat, centroMedico.position.lon]);
 
