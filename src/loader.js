@@ -59,8 +59,36 @@ function bootstrap() {
           "value" : "Pediatría"
         },
         {
-          "text"     : "Psicología",
-          "value"    : "Psicología",
+          "text"  : "Psicología",
+          "value" : "Psicología",
+        },
+        {
+          "text"  : "Odontología",
+          "value" : "Odontología",
+        },
+        {
+          "text"  : "Cardiología",
+          "value" : "Cardiología",
+        },
+        {
+          "text"  : "Ginecología",
+          "value" : "Ginecología",
+        },
+        {
+          "text"  : "Neurología",
+          "value" : "Neurología",
+        },
+        {
+          "text"  : "Nutrición",
+          "value" : "Nutrición",
+        },
+        {
+          "text"  : "Reumatología",
+          "value" : "Reumatología",
+        },
+        {
+          "text"  : "Toxicología",
+          "value" : "Toxicología",
         },
         {
           "text"  : "Urología",

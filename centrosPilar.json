@@ -18,7 +18,7 @@
       "pais": "Argentina",
       "localidad": "Pilar",
       "nombre": "Hospital Odontologico MUNICIPAL PILAR",
-      "especialidad": "Urología",
+      "especialidad": "Odontología",
       "telefono": "011 2332-5236",
       "id": 1
     },
@@ -35,9 +35,26 @@
       "pais": "Argentina",
       "localidad": "Pilar",
       "nombre": "Dental Total",
-      "especialidad": "Odontología", 
+      "especialidad": "Odontología",
       "telefono": "0800-777-1919",
       "id": 2
+    },
+    {
+      "provincia": "Buenos Aires",
+      "coordinate": {
+        "lat": -34.458569,
+        "lon": -58.911514
+      },
+      "telefono2": "-",
+      "numero": 446,
+      "calle": "Bolivar",
+      "horario": "-",
+      "pais": "Argentina",
+      "localidad": "Pilar",
+      "nombre": "Centro Médico Urológico Bolivar",
+      "especialidad": "Urología",
+      "telefono": "-",
+      "id": 3
     }
   ]
 }
