@@ -23,7 +23,7 @@ function bootstrap() {
     var positionsSource = "https://fastspeedster.herokuapp.com/api/positions/";
     //var webcamsSource = "https://fastspeedster.herokuapp.com/api/webcams/"; // este es solo la camara 42 no?¿
 
-    var centrosMedicosSource = "https://raw.githubusercontent.com/aikomisa5/TPIngenieria/master/centrosPilar.json";
+    var centrosMedicosSource = "https://raw.githubusercontent.com/aikomisa5/CentrosMedicosPilar/master/centrosPilar.json";
 
     // Creación del componente mapa de Leaflet.
     var map = L.map("mapid").setView([-34.458431, -58.914743], 14); // no se declara var para que sea global a todas las clases.
