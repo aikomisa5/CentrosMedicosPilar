@@ -10,7 +10,7 @@ function centrosLoader(url) {
 
 
     this.cargarCentrosPorTipo = function (tipo, map){
-      //console.log("Cantidad de marcadores: " + marcadores.length());
+
       marcadores.forEach(function(mark){
         console.log("Borrando marcadores");
         centroLayer.removeLayer(mark);
@@ -32,8 +32,6 @@ function centrosLoader(url) {
             console.log("Datos del Centro: "+centroMedico.showDetails());
 
             if (centroMedico.especialidad == tipo){
-
-              //centroLayer.removeLayer(marker);
 
               marker = L.marker([centroMedico.position.lat, centroMedico.position.lon]);
 
