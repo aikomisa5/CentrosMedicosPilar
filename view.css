@@ -118,7 +118,7 @@ body {
     font-size: 3vh;
     -webkit-transition-duration: 0.4s;
     color: white;
-    margin-left: -120px;
+    margin-left: 0px;
 }
 
 #myBtn:hover {
