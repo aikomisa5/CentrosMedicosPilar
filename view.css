@@ -1,6 +1,11 @@
 body {
 }
 
+#contenedor {
+  width: 800px;
+  margin: 0 auto;
+}
+
 #header{
     padding-bottom: 1px;
 }
@@ -8,6 +13,10 @@ body {
 #mapid {
     height: 100vh;
     width:  128vh;
+}
+
+#anchura{
+  width:  128vh;
 }
 
 #barraLat{
@@ -23,6 +32,7 @@ body {
   font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
   font-size:large;
   color: white;
+  width: 0 auto;
 }
 
 #blanco{
