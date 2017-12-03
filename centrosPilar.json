@@ -1,0 +1,43 @@
+{
+  "version": {
+    "lastupdate": 1512048754755,
+    "id": "0.1.1",
+    "name": "fastspeedster"
+  },
+  "centros": [
+    {
+      "provincia": "Buenos Aires",
+      "coordinate": {
+        "lat": -34.458055999999999,
+        "lon": -58.911324
+      },
+      "telefono2": "-",
+      "numero": 469,
+      "calle": "Hip\u00f3lito Yrigoyen",
+      "horario": "07-16",
+      "pais": "Argentina",
+      "localidad": "Pilar",
+      "nombre": "Hospital Odontologico MUNICIPAL PILAR",
+      "especialidad": "Urología",
+      "telefono": "011 2332-5236",
+      "id": 1
+    },
+    {
+      "provincia": "Buenos Aires",
+      "coordinate": {
+        "lat": -34.456313000000002,
+        "lon": -58.913339000000001
+      },
+      "telefono2": "-",
+      "numero": 446,
+      "calle": "Rivadavia",
+      "horario": "09-20",
+      "pais": "Argentina",
+      "localidad": "Pilar",
+      "nombre": "Dental Total",
+      "especialidad": "Odontología", 
+      "telefono": "0800-777-1919",
+      "id": 2
+    }
+  ]
+}

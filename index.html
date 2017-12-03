@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+
+    <meta charset="utf-8">
+
+    <!-- info requerida por bootstrap-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Centros Médicos de Pilar</title>
+
+    <!-- carga del css de bootstrap con estilos predefinidos-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- carga de jQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- carga de bootstrap.js-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+
+    <!-- include leaflet -->
+    <link rel="stylesheet" href="./leaflet/leaflet.css" />
+    <script src="./leaflet/leaflet.js"></script>
+
+    <!-- carga de css propio y modulos propios -->
+    <link rel="stylesheet" type="text/css" media="screen" href="view.css" />
+    <script src="./src/race.js"></script>
+    <script src="./src/runner.js"></script>
+    <script src="./src/position.js"></script>
+    <script src="./src/sponsor.js"></script>
+    <script src="./src/trackLoader.js"></script>
+    <script src="./src/webcamsLoader.js"></script>
+    <script src="./src/runnersLoader.js"></script>
+    <script src="./src/positionsLoader.js"></script>
+    <script src="./src/centroMedicoLoader.js"></script>
+    <script src="./src/centroMedico.js"></script>
+    <script src="./src/tipoCentro.js"></script>
+    <script src="./src/loader.js"></script>
+
+
+</head>
+
+<body>
+
+
+  <style>
+
+    body {
+      margin-left: 0px;
+      margin-top: 30px;
+      margin-bottom: 0px;
+      background-image: url("https://images8.alphacoders.com/292/292577.jpg");
+    }
+    h3 {
+        color: white;
+        text-align: center;
+    }
+    h1 {
+        color: white;
+    }
+    p{
+      color: white;
+    }
+    h2{
+      color: white;
+    }
+  </style>
+
+  <div class="container">
+  <div class="row content">
+    <div class="col-sm-2 sidenav" id="barraLat">
+      <table>
+        <tr>
+          <td id="blanco">
+            <label>Especialidad:</label>
+          </td>
+          <td>
+            <select id="rec_mode">
+            </select>
+          </td>
+        </tr>
+      </table>
+      <button id="myBtn">Buscar</button>
+      <p><a href="#">Link</a></p>
+      <p><a href="#">Link</a></p>
+      <p><a href="#">Link</a></p>
+    </div>
+    <div class="col-sm-8 text-left">
+      <h1>Sistema de Centros Médicos de Pilar</h1>
+      <p>Bienvenido al sistema de Centros Médicos ubicados en el partido de Pilar</p>
+      <hr>
+      <div class="col-md-9" id="mapid"></div>
+
+    </div>
+
+  </div>
+</div>
+<div class="container">
+<div class="row content">
+  <div class="col-sm-2 sidenav">
+  </div>
+  <div class="col-sm-8 text-left">
+    <hr>
+    <h2>Detalles de los centros encontrados</h2>
+  <div class="table-responsive">
+  <table class="table" id="tablaCentros">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Nombre</th>
+        <th>Dirección</th>
+        <th>Teléfono</th>
+        <th>Colectivos</th>
+        <th>Horarios</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Anna</td>
+        <td>Pitt</td>
+        <td>35</td>
+        <td>New York</td>
+        <td>USA</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>Anna</td>
+        <td>Pitt</td>
+        <td>35</td>
+        <td>New York</td>
+        <td>USA</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>Anna</td>
+        <td>Pitt</td>
+        <td>35</td>
+        <td>New York</td>
+        <td>USA</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>Anna</td>
+        <td>Pitt</td>
+        <td>35</td>
+        <td>New York</td>
+        <td>USA</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>Anna</td>
+        <td>Pitt</td>
+        <td>35</td>
+        <td>New York</td>
+        <td>USA</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>Anna</td>
+        <td>Pitt</td>
+        <td>35</td>
+        <td>New York</td>
+        <td>USA</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>Anna</td>
+        <td>Pitt</td>
+        <td>35</td>
+        <td>New York</td>
+        <td>USA</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>Anna</td>
+        <td>Pitt</td>
+        <td>35</td>
+        <td>New York</td>
+        <td>USA</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>Anna</td>
+        <td>Pitt</td>
+        <td>35</td>
+        <td>New York</td>
+        <td>USA</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>Anna</td>
+        <td>Pitt</td>
+        <td>35</td>
+        <td>New York</td>
+        <td>USA</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>Anna</td>
+        <td>Pitt</td>
+        <td>35</td>
+        <td>New York</td>
+        <td>USA</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>Anna</td>
+        <td>Pitt</td>
+        <td>35</td>
+        <td>New York</td>
+        <td>USA</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>Anna</td>
+        <td>Pitt</td>
+        <td>35</td>
+        <td>New York</td>
+        <td>USA</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>Anna</td>
+        <td>Pitt</td>
+        <td>35</td>
+        <td>New York</td>
+        <td>USA</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>Anna</td>
+        <td>Pitt</td>
+        <td>35</td>
+        <td>New York</td>
+        <td>USA</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  </div>
+
+</div>
+</div>
+
+
+
+
+    </body>
+</html>
