@@ -11,7 +11,8 @@ body {
 }
 
 #barraLat{
-  margin-top: 330px;
+  margin-top: 195px;
+  margin-right: 50px;
 }
 
 #tablaCentros{
@@ -25,13 +26,71 @@ body {
   color: white;
 }
 
-#fuente{
+#centrado{
   font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
-  color: cyan;
+  text-align: center;
+  font-size: 3.5vh;
 }
 
+#fuente{
+  font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+  color: white;
+  text-shadow: 1px 1px #ffffff;
+  background-color:#4088ff;
+   border-radius: 3px;
+   border: solid;
+   padding: 8px 8px;
+   text-decoration: none;
+   font-size: 6.5vh;
+   -webkit-transition-duration: 0.4s;
+   text-align: center;
+}
+
+#fuente2{
+  font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+  color: white;
+  background-color:#336699;
+   border-radius: 3px;
+   border: solid;
+   padding: 8px 8px;
+   text-decoration: none;
+   font-size: 6.5vh;
+   -webkit-transition-duration: 0.4s;
+   text-align: center;
+}
+
+#especialidad{
+  background-color:#ff6699;
+   border-radius: 3px;
+   border: none;
+   color: white;
+   padding: 8px 8px;
+   text-align: center;
+   text-decoration: none;
+   font-size: 2.6vh;
+   -webkit-transition-duration: 0.4s;
+   color: white;
+   margin-bottom: 5px;
+}
+
+#especialidad2{
+  background-color:#ff6699;
+   border-radius: 3px;
+   border: none;
+   color: black;
+   padding: 8px 8px;
+   text-align: center;
+   text-decoration: none;
+   font-size: 2.6vh;
+   -webkit-transition-duration: 0.4s;
+   color: black;
+   margin-bottom: 5px;
+}
+
+
+
 #myBtn {
-   background-color:#4088ff;
+   background-color:#339966;
     border-radius: 4px;
     border: none;
     color: white;
@@ -44,6 +103,6 @@ body {
 }
 
 #myBtn:hover {
-   background-color: #5165b7;
+   background-color: #006600;
     color: white;
 }
