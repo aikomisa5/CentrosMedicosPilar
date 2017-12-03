@@ -42,7 +42,7 @@ function centrosLoader(url) {
               console.log("Guardando nuevo marcador");
               marcadores.push(marker);
 
-              console.log("CENTRO QUE MATCHEA");
+              console.log("Existe un centro con esa especialidad");
             }
             else {
               console.log("No matchea ningun centro");
