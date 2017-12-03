@@ -4,17 +4,21 @@ function centrosLoader(url) {
     var centrosLista = [];
     var centroLayer;
     var marker;
+    var marcadores = [];
     this.finishedLoad = false;
 
 
 
     this.cargarCentrosPorTipo = function (tipo, map){
+      //console.log("Cantidad de marcadores: " + marcadores.length());
+      marcadores.forEach(function(mark){
+        console.log("Borrando marcadores");
+        centroLayer.removeLayer(mark);
+      });
       //centroLayer = L.featureGroup().addTo(map); // es un featureGroup
 
-
-        console.log("here", tipo);
         if(centrosLista.length==0){
-          console.log("VACIO");
+          console.log("No hay centros cargados!");
         }
         else {
           console.log("Hay centros cargados!");
@@ -24,10 +28,22 @@ function centrosLoader(url) {
           var centroMedico = new CentroMedico(cent.id, cent.nombre, cent.especialidad,
                 cent.telefono, cent.telefono2, cent.horario, cent.pais, cent.provincia, cent.localidad, cent.calle, cent.numero
             );
+            centroMedico.addPosition(cent.position.lat, cent.position.lon);
             console.log("Datos del Centro: "+centroMedico.showDetails());
 
             if (centroMedico.especialidad == tipo){
-              map.layersControl.removeLayer(marker);
+
+              //centroLayer.removeLayer(marker);
+
+              marker = L.marker([centroMedico.position.lat, centroMedico.position.lon]);
+
+              marker.bindPopup("<b>"+centroMedico.nombre+"</b>"+"<br>"+centroMedico.calle + " " + centroMedico.numero).openPopup();
+
+              centroLayer.addLayer(marker);
+
+              console.log("Guardando nuevo marcador");
+              marcadores.push(marker);
+
               console.log("CENTRO QUE MATCHEA");
             }
             else {
@@ -91,6 +107,7 @@ function centrosLoader(url) {
                 marker.bindPopup("<b>"+centro.nombre+"</b>"+"<br>"+centro.calle + " " + centro.numero).openPopup();
 
                 centroLayer.addLayer(marker);
+                marcadores.push(marker);
                 centrosLista.push(centroMedico);
                 console.log(centroMedico.showDetails());
             });

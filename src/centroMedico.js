@@ -11,9 +11,10 @@ var CentroMedico = function(id, nombre, especialidad, telefono, telefono2, horar
     this.localidad = localidad;
     this.calle = calle;
     this.numero = numero;
+    this.position;
     this.historyPositions = [];
     this.addPosition = function(lat, lon) {
-        this.historyPositions.push(new Position(lat, lon));
+        this.position = new Position(lat, lon);
     }
 
     //inicialización del indice para recorrer el arreglo de posiciones
