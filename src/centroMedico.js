@@ -32,6 +32,6 @@ var CentroMedico = function(id, nombre, especialidad, telefono, telefono2, horar
     }
 
     this.showDetails = function() {
-        return name + " " + surname + " sponsor: " + sponsor.name;
+        return nombre + " " + especialidad;
     }
 };

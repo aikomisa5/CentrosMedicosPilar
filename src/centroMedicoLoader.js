@@ -2,47 +2,44 @@ function centrosLoader(url) {
     this.url = url;
     var latlngs = [];
     var centrosLista = [];
+    var centroLayer;
+    var marker;
     this.finishedLoad = false;
 
-  /*  this.cargarCiertoTipoDeCentro = function(enum tipoCentro){
 
-  }*/
 
     this.cargarCentrosPorTipo = function (tipo, map){
-      var centroLayer = L.featureGroup().addTo(map); // es un featureGroup
-      map.layersControl.removeLayer(centroLayer);
-        map.layersControl.addOverlay(centroLayer, "Centros Medicos");
+      //centroLayer = L.featureGroup().addTo(map); // es un featureGroup
+
+
         console.log("here", tipo);
         if(centrosLista.length==0){
           console.log("VACIO");
         }
-        function buscandoCentros(){
-        for (var i = 0; i <= centrosLista.length; i++) {
-          if (centrosLista[i].especialidad.equals(tipo)){
-            console.log("HERE3");
-          }
         else {
-          console.log("No matchea ningun centro");
-        }};
+          console.log("Hay centros cargados!");
         }
+
+        centrosLista.forEach(function(cent) {
+          var centroMedico = new CentroMedico(cent.id, cent.nombre, cent.especialidad,
+                cent.telefono, cent.telefono2, cent.horario, cent.pais, cent.provincia, cent.localidad, cent.calle, cent.numero
+            );
+            console.log("Datos del Centro: "+centroMedico.showDetails());
+
+            if (centroMedico.especialidad == tipo){
+              map.layersControl.removeLayer(marker);
+              console.log("CENTRO QUE MATCHEA");
+            }
+            else {
+              console.log("No matchea ningun centro");
+            }
+        });
+
+
+
       }
 
-        /*$.each(centrosLista, function(index, value) {
-          console.log(value);
-        });*/
-          /*if (item.especialidad.equals(tipo)){
-            console.log("here2:");
-          }*/
 
-      /*centrosLista.forEach( (cent) => {if (cent.especialidad.equals(tipo)){
-          var centroLayer = L.featureGroup().addTo(map);
-          consolo.log("here2: ", cent.especialidad);
-          marker = L.marker([cent.coordinate.lat, cent.coordinate.lon]);
-
-          marker.bindPopup("<b>"+cent.nombre+"</b>"+"<br>"+cent.calle + " " + cent.numero).openPopup();
-
-          centroLayer.addLayer(marker);
-        }});*/
 
 
     this.loadCentros = function(map) {
@@ -74,29 +71,28 @@ function centrosLoader(url) {
                 console.log("coordenada centro: " + centro.lat + ", " + centro.lon);
                 latlngs.push([centro.lat, centro.lon]);
                 centrosLista.push([new centroMedico(centro.id, centro.nombre, centro.especialidad, centro.telefono, centro.telefono2, centro.horario,
-                centro.pais, centro.provincia, centro.localidad, centro.calle, centro.numero, centro.addPosition(centro.lat, centro.lon))]);
+                centro.pais, centro.provincia, centro.localidad, centro.calle, centro.numero)]);
             });
         }
 
         function cargarMapa(centrosListResponse, self) {
             console.log("callback llamado");
-            var centroLayer = L.featureGroup().addTo(map); // es un featureGroup
+            centroLayer = L.featureGroup().addTo(map); // es un featureGroup
             // Agregamos el layer al control
-            map.layersControl.addOverlay(centroLayer, "Centros Medicos");
+            //Sirve para activar y descativar todos los marcadores pertenecientes al layer
+            //map.layersControl.addOverlay(centroLayer, "Centros Medicos");
             console.log("Añadiendo Centros Medicos al Mapa");
             centrosListResponse.centros.forEach(function(centro) {
-
+                var centroMedico = new CentroMedico(centro.id, centro.nombre, centro.especialidad, centro.telefono, centro.telefono2, centro.horario,
+                centro.pais, centro.provincia, centro.localidad, centro.calle, centro.numero);
+                centroMedico.addPosition(centro.coordinate.lat, centro.coordinate.lon);
                 marker = L.marker([centro.coordinate.lat, centro.coordinate.lon]);
 
                 marker.bindPopup("<b>"+centro.nombre+"</b>"+"<br>"+centro.calle + " " + centro.numero).openPopup();
-              //  "<b>Hello world!</b><br>I am a popup."
-                /*marker.on('click', function() {
-                    mostrarDatos(centro);
-                });*/
-                centroLayer.addLayer(marker);
-                centrosLista.push([new centroMedico(centro.id, centro.nombre, centro.especialidad, centro.telefono, centro.telefono2, centro.horario,
-                centro.pais, centro.provincia, centro.localidad, centro.calle, centro.numero, centro.addPosition(centro.lat, centro.lon))]);
 
+                centroLayer.addLayer(marker);
+                centrosLista.push(centroMedico);
+                console.log(centroMedico.showDetails());
             });
 
             self.finishedLoad = true;
