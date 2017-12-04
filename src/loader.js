@@ -49,32 +49,76 @@ function bootstrap() {
           "selected" : true
         },
         {
-          "text"  : "Pediatría",
-          "value" : "Pediatría"
+          "text"  : "Alergología",
+          "value" : "Alergología"
         },
         {
-          "text"  : "Psicología",
-          "value" : "Psicología",
-        },
-        {
-          "text"  : "Odontología",
-          "value" : "Odontología",
+          "text"  : "Anestesiología y reanimación",
+          "value" : "Anestesiología y reanimación",
         },
         {
           "text"  : "Cardiología",
           "value" : "Cardiología",
         },
         {
-          "text"  : "Ginecología",
-          "value" : "Ginecología",
+          "text"  : "Gastroenterología",
+          "value" : "Gastroenterología",
+        },
+        {
+          "text"  : "Endocrinología",
+          "value" : "Endocrinología",
+        },
+        {
+          "text"  : "Geriatría",
+          "value" : "Geriatría",
+        },
+        {
+          "text"  : "Hematología y hemoterapia",
+          "value" : "Hematología y hemoterapia",
+        },
+        {
+          "text"  : "Infectología",
+          "value" : "Infectología",
+        },
+        {
+          "text"  : "Nefrología",
+          "value" : "Nefrología",
+        },
+        {
+          "text"  : "Neumología",
+          "value" : "Neumología",
         },
         {
           "text"  : "Neurología",
           "value" : "Neurología",
         },
         {
-          "text"  : "Nutrición",
-          "value" : "Nutrición",
+          "text"  : "Nutriología",
+          "value" : "Nutriología",
+        },
+        {
+          "text"  : "Oftalmología",
+          "value" : "Oftalmología",
+        },
+        {
+          "text"  : "Oncología médica",
+          "value" : "Oncología médica",
+        },
+        {
+          "text"  : "Oncología radioterápica",
+          "value" : "Oncología radioterápica",
+        },
+        {
+          "text"  : "Pediatría",
+          "value" : "Pediatría",
+        },
+        {
+          "text"  : "Psiquiatría",
+          "value" : "Psiquiatría",
+        },
+        {
+          "text"  : "Rehabilitación",
+          "value" : "Rehabilitación",
         },
         {
           "text"  : "Reumatología",
@@ -92,10 +136,102 @@ function bootstrap() {
 
       options.forEach( (option) => optionList.add( new Option(option.text, option.value, option.selected ) ));
 
+      var optionList2 = document.getElementById('rec_mode2').options;
+       var options2 = [
+         {
+           "text"  : "Seleccione..",
+           "value" : "Seleccione",
+           "selected" : true
+         },
+         {
+           "text"  : "Cirugía cardiovascular",
+           "value" : "Cirugía cardiovascular"
+         },
+         {
+           "text"  : "Cirugía general y del aparato digestivo",
+           "value" : "Cirugía general y del aparato digestivo",
+         },
+         {
+           "text"  : "Cirugía oral y maxilofacial",
+           "value" : "Cirugía oral y maxilofacial",
+         },
+         {
+           "text"  : "Cirugía ortopédica y traumatología",
+           "value" : "Cirugía ortopédica y traumatología",
+         },
+         {
+           "text"  : "Cirugía pediátrica",
+           "value" : "Cirugía pediátrica",
+         },
+         {
+           "text"  : "Cirugía plástica, estética y reparadora",
+           "value" : "Cirugía plástica, estética y reparadora",
+         },
+         {
+           "text"  : "Cirugía torácica",
+           "value" : "Cirugía torácica",
+         },
+         {
+           "text"  : "Neurocirugía",
+           "value" : "Neurocirugía",
+         },
+         {
+           "text"  : "Proctología",
+           "value" : "Proctología"
+         }
+       ];
+
+       options2.forEach( (option) => optionList2.add( new Option(option.text, option.value, option.selected ) ));
+
+       var optionList3 = document.getElementById('rec_mode3').options;
+        var options3 = [
+          {
+            "text"  : "Seleccione..",
+            "value" : "Seleccione",
+            "selected" : true
+          },
+          {
+            "text"  : "Angiología y cirugía vascular",
+            "value" : "Angiología y cirugía vascular"
+          },
+          {
+            "text"  : "Dermatología médico-quirúrgica y venereología",
+            "value" : "Dermatología médico-quirúrgica y venereología",
+          },
+          {
+            "text"  : "Odontología",
+            "value" : "Odontología",
+          },
+          {
+            "text"  : "Ginecología y obstetricia o tocología",
+            "value" : "Ginecología y obstetricia o tocología",
+          },
+          {
+            "text"  : "Oftalmología",
+            "value" : "Oftalmología",
+          },
+          {
+            "text"  : "Otorrinolaringología",
+            "value" : "Otorrinolaringología",
+          },
+          {
+            "text"  : "Urología",
+            "value" : "Urología",
+          },
+          {
+            "text"  : "Traumatología",
+            "value" : "Traumatología"
+          }
+        ];
+
+        options3.forEach( (option) => optionList3.add( new Option(option.text, option.value, option.selected ) ));
+
+
     $(document).ready(function() { // si se termino de cargar todo el html
         $("#myBtn").click(function() {
             if (cargaFinalizada()) {
-              var valorTipo = $( "#rec_mode option:selected" ).text();
+              var valorTipo = obtenerValorDeCombo();
+              /*var valorTipo = $( "#rec_mode option:selected" ).text();*/
                 centroMedicoLoader.cargarCentrosPorTipo(valorTipo, map);
                 centroMedicoLoader.obtenerResultados();
                 //$("#runners").show(500);
@@ -111,9 +247,64 @@ function bootstrap() {
         });
     });
 
+    $(document).ready(function() { // si se termino de cargar todo el html
+        $("#rec_mode").click(function() {
+            for (var i = 0, l = optionList2.length; i < l; i++) {
+                optionList2[i].selected = optionList2[i].defaultSelected;
+            }
+            for (var i = 0, l = optionList3.length; i < l; i++) {
+                optionList3[i].selected = optionList3[i].defaultSelected;
+            }
+                console.log("Presionaste el combo de especialidad clínica");
+
+        });
+    });
+
+    $(document).ready(function() { // si se termino de cargar todo el html
+        $("#rec_mode2").click(function() {
+            for (var i = 0, l = optionList.length; i < l; i++) {
+                optionList[i].selected = optionList[i].defaultSelected;
+            }
+            for (var i = 0, l = optionList3.length; i < l; i++) {
+                optionList3[i].selected = optionList3[i].defaultSelected;
+            }
+                console.log("Presionaste el combo de especialidades quirúrgicas");
+
+        });
+    });
+
+    $(document).ready(function() { // si se termino de cargar todo el html
+        $("#rec_mode3").click(function() {
+            for (var i = 0, l = optionList.length; i < l; i++) {
+                optionList[i].selected = optionList[i].defaultSelected;
+            }
+            for (var i = 0, l = optionList2.length; i < l; i++) {
+                optionList2[i].selected = optionList2[i].defaultSelected;
+            }
+                console.log("Presionaste el combo de especialidades médico-quirúrgicas");
+
+        });
+    });
+
     //determina si la carga de los datos finalizo o no.
     function cargaFinalizada() {
         return centroMedicoLoader.finishedLoad;
+    }
+
+    function obtenerValorDeCombo(){
+      var valor1 = $( "#rec_mode option:selected" ).text();
+      var valor2 = $( "#rec_mode2 option:selected" ).text();
+      var valor3 = $( "#rec_mode3 option:selected" ).text();
+
+      if (valor1 != "Seleccione.."){
+        return valor1;
+      }
+      else if (valor2 != "Seleccione.."){
+        return valor2;
+      }
+      else if (valor3 != "Seleccione.."){
+        return valor3;
+      }
     }
 }
 

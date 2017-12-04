@@ -55,7 +55,11 @@
       margin-top: 30px;
       margin-bottom: 0px;
 
-      background-image: url("https://i.imgur.com/VKTPd2M.jpg");
+      background-image: url("https://coffeewiththelord.files.wordpress.com/2016/01/birds-and-spring-flowers.jpg");
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: left down;
+      margin-right: 90px;
     }
     h3 {
         color: white;
@@ -67,6 +71,15 @@
     h2{
       color: white;
     }
+    hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    /*border-top: 1px solid #ccc;*/
+    border-top: 1px solid #bfff80;
+    margin: 1em 0;
+    padding: 0;
+}
   </style>
 
   <div class="container">
@@ -93,13 +106,36 @@
       <p id="centrado">Bienvenido al sistema de centros médicos ubicados en el partido de Pilar</p>
       <hr>
       <div class="row">
-      <div class="col-sm-6"><table id= "especialidad2">
+      <div class="col-sm-6">
+        <table id= "especialidad2">
           <tr>
             <td>
-              <label id="especialidad">Especialidad:</label>
+              <label id="especialidad">Especialidad clínica:</label>
             </td>
             <td>
               <select id="rec_mode">
+              </select>
+            </td>
+          </tr>
+          </table>
+          <table id= "especialidad2">
+          <tr>
+            <td>
+              <label id="especialidad">Especialidades quirúrgicas:</label>
+            </td>
+            <td>
+              <select id="rec_mode2">
+              </select>
+            </td>
+          </tr>
+          </table>
+          <table id= "especialidad2">
+          <tr>
+            <td>
+              <label id="especialidad">Especialidades médico-quirúrgicas:</label>
+            </td>
+            <td>
+              <select id="rec_mode3">
               </select>
             </td>
           </tr>
@@ -107,6 +143,8 @@
       </div>
       <div class="col-sm-3"><button id="myBtn">Buscar</button></div>
       </div>
+      <hr>
+      <h2 id="fuente2">Mapa de la localidad de Pilar</h2>
       <hr>
       <div class="col-md-9" id="mapid"></div>
 
@@ -119,17 +157,17 @@
   </div>-->
   <div class="col-sm-8 text-left" id="tablaCentros">
     <hr>
-    <h2 id="fuente2">Detalles de los centros encontrados</h2>
+    <h2 id="fuente2">Datos de los centros médicos encontrados</h2>
   <div class="table-responsive" id="tablaID">
   <table class="table" id="tablaCentros">
     <thead>
-      <tr>
-        <th>#</th>
-        <th>Nombre</th>
-        <th>Dirección</th>
-        <th>Teléfono</th>
-        <th>Colectivos</th>
-        <th>Horarios</th>
+      <tr id="columnasTabla">
+        <th id="colxcol">#</th>
+        <th id="colxcol">Nombre</th>
+        <th id="colxcol">Dirección</th>
+        <th id="colxcol">Teléfono</th>
+        <th id="colxcol">Colectivos</th>
+        <th id="colxcol">Horarios</th>
       </tr>
     </thead>
     <tbody id="tablaBody">
@@ -151,6 +189,7 @@
 
 </div>
 </div>
+<hr>
 <footer class="container-fluid text-center">
   <p id="links"><a href="http://www.pilar.gov.ar/" id="blanco">Página de la Municipalidad de Pilar</a>
 </p>

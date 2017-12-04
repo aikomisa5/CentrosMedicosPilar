@@ -11,8 +11,12 @@ body {
 }
 
 #mapid {
-    height: 100vh;
-    width:  128vh;
+    /*height: 100vh;
+    width:  128vh;*/
+    height: 580px;
+    width: 100%;
+    box-shadow: 5px 5px 5px #888;
+
 }
 
 #anchura{
@@ -31,8 +35,12 @@ body {
 #tablaCentros{
   font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
   font-size:large;
-  color: white;
+  color: black;
   width: 0 auto;
+}
+
+#negro{
+  color:black;
 }
 
 #blanco{
@@ -44,6 +52,7 @@ body {
   font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
   text-align: center;
   font-size: 3.5vh;
+  color: black;
 }
 
 #fuente{
@@ -63,33 +72,37 @@ body {
 #fuente2{
   font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
   color: white;
-  background-color:#336699;
+  background-color:#0099cc;
    border-radius: 3px;
    border: solid;
+   border-color: black;
    padding: 8px 8px;
    text-decoration: none;
    font-size: 6.5vh;
    -webkit-transition-duration: 0.4s;
    text-align: center;
+   border-radius: 10px;
+   width: 100%
 }
 
 #links{
   background-color:#000000;
-   border-radius: 3px;
+   border-radius: 10px;
    border: none;
    color: white;
    padding: 8px 8px;
    text-align: center;
    text-decoration: none;
+   width: 100%
    font-size: 2.0vh;
    -webkit-transition-duration: 0.4s;
    color: white;
-   margin-bottom: 5px;
+   margin-bottom: 10px;
 }
 
 #especialidad{
   background-color:#ff6699;
-   border-radius: 3px;
+   border-radius: 10px;
    border: none;
    color: white;
    padding: 8px 8px;
@@ -98,7 +111,8 @@ body {
    font-size: 2.6vh;
    -webkit-transition-duration: 0.4s;
    color: white;
-   margin-bottom: 5px;
+   margin-bottom: 10px;
+   width: 100%
 }
 
 #especialidad2{
@@ -112,10 +126,44 @@ body {
    font-size: 2.6vh;
    -webkit-transition-duration: 0.4s;
    color: black;
-   margin-bottom: 5px;
+   margin-bottom: 10px;
+   box-shadow: 5px 5px 5px #888;
+   width: 100%
 }
 
+#columnasTabla{
+  background-color:#ff6699;
+   border-radius: 15px;
+   border: none;
+   color: black;
+   padding: 8px 8px;
+   text-align: center;
+   text-decoration: none;
+   font-size: 2.6vh;
+   -webkit-transition-duration: 0.4s;
+   margin-bottom: 5px;
+   width: 100%
+}
 
+#colxcol{
+  background-color:#ff6699;
+   border-radius: 0px;
+   border: solid;
+   border-color: black;
+   color: black;
+   padding: 8px 8px;
+   text-align: center;
+}
+
+#tablaBody{
+
+   border-radius: 0px;
+   border: solid;
+   border-color: black;
+   color: white;
+   padding: 8px 8px;
+   text-align: center;
+}
 
 #myBtn {
    background-color:#339966;
@@ -128,7 +176,9 @@ body {
     font-size: 3vh;
     -webkit-transition-duration: 0.4s;
     color: white;
-    margin-left: 0px;
+    margin-left: 35px;
+    box-shadow: 5px 5px 5px #888;
+    width: 100%
 }
 
 #myBtn:hover {
