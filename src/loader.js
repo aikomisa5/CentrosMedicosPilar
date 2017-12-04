@@ -17,12 +17,6 @@ function bootstrap() {
         xhttp.send();
     }
 
-    var trackSource = "https://fastspeedster.herokuapp.com/api/tracks/";
-    var runnersSource = "https://api.myjson.com/bins/14m1xf";
-    //var runnersSource = "https://fastspeedster.herokuapp.com/api/runners/";
-    var positionsSource = "https://fastspeedster.herokuapp.com/api/positions/";
-    //var webcamsSource = "https://fastspeedster.herokuapp.com/api/webcams/"; // este es solo la camara 42 no?¿
-
     var centrosMedicosSource = "https://raw.githubusercontent.com/aikomisa5/CentrosMedicosPilar/master/centrosPilar.json";
 
     // Creación del componente mapa de Leaflet.
@@ -98,38 +92,12 @@ function bootstrap() {
 
       options.forEach( (option) => optionList.add( new Option(option.text, option.value, option.selected ) ));
 
-
-/*
-    $("#runners").hide();
-    console.log("creando Trackloader");
-    var trackLoader = new TrackLoader(trackSource, 42);
-
-    console.log("loadTrack");
-    trackLoader.loadTrack(map);
-
-    console.log("creando WebcamsLoader");
-    var webcamsLoader = new WemcamsLoader(webcamsSource, 42);
-
-    console.log("loadWebCams");
-    webcamsLoader.loadWebcams(map);
-
-    console.log("creando Race");
-    var race1K = new Race("1K", map);
-
-    console.log("creando Runnersloader");
-    var runnersLoader = new RunnersLoader(runnersSource);
-
-    console.log("creando Positionsloader");
-    var positionsLoader = new PositionsLoader(positionsSource);
-
-    console.log("loadRunners");
-    runnersLoader.loadRunnersTo(race1K, positionsLoader);
-*/
     $(document).ready(function() { // si se termino de cargar todo el html
         $("#myBtn").click(function() {
             if (cargaFinalizada()) {
               var valorTipo = $( "#rec_mode option:selected" ).text();
                 centroMedicoLoader.cargarCentrosPorTipo(valorTipo, map);
+                centroMedicoLoader.obtenerResultados();
                 //$("#runners").show(500);
             } else {
                 console.log("carga incompleta");

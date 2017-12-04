@@ -5,14 +5,17 @@ function centrosLoader(url) {
     var centroLayer;
     var marker;
     var marcadores = [];
-    var resultados = new Array();
+    var resultados = [];
+    //var resultados = new Array();
     var indice = 0;
     this.finishedLoad = false;
 
 
 
     this.cargarCentrosPorTipo = function (tipo, map){
-
+      console.log("Inicializando resultados en 0");
+      resultados = [];
+      this.indice=0;
       marcadores.forEach(function(mark){
         console.log("Borrando marcadores");
         centroLayer.removeLayer(mark);
@@ -35,8 +38,7 @@ function centrosLoader(url) {
 
             if (centroMedico.especialidad == tipo){
 
-              resultados[indice] = new Array(centroMedico.id, centroMedico.nombre, centroMedico.calle + centroMedico.numero, centroMedico.telefono, "10", centroMedico.horario);
-              indice ++;
+            resultados.push(new Array(centroMedico.id, centroMedico.nombre, centroMedico.calle + centroMedico.numero, centroMedico.telefono, "10", centroMedico.horario));
 
               marker = L.marker([centroMedico.position.lat, centroMedico.position.lon]);
 
@@ -50,41 +52,53 @@ function centrosLoader(url) {
               console.log("Existe un centro con esa especialidad");
             }
             else {
-              console.log("No matchea ningun centro");
+              console.log("Uno de los centros no es de la especialidad elegida");
             }
         });
+      }
 
+      this.obtenerResultados = function(){
+        if (resultados.length != 0){
+          console.log("Hay resultados de centros con esa especialidad: Cantidad: " + resultados.length);
+        for (i = 0; i < resultados.length; i++) {
+            for (j = 0; j < resultados[i].length; j++) {
+              console.log(resultados[i][j]);
+
+            }
+          }
+        }
+        else{
+          console.log("No hay resultados de centros de esa especialidad!")
+        }
+
+        var myTableDiv = document.getElementById("tablaID");
+        var table = document.getElementById("tablaCentros");
+        var tableBody = document.getElementById("tablaBody");
+
+        //Eliminando filas al momento de generar los datos de la tabla de nuevo
+         while(tableBody.rows.length > 0) {
+           console.log("Eliminando filas porque se hizo click en boton buscar");
+            tableBody.deleteRow(0);
+          }
+            //TABLE ROWS
+            for (i = 0; i < resultados.length; i++) {
+              var tr = document.createElement('TR');
+              for (j = 0; j < resultados[i].length; j++) {
+                  var td = document.createElement('TD')
+                  td.appendChild(document.createTextNode(resultados[i][j]));
+                  tr.appendChild(td)
+              }
+              tableBody.appendChild(tr);
+          }
 
 
       }
 
 
-
-
     this.loadCentros = function(map) {
-        //modifica el html para mostrar la info del centro
-      /*  function mostrarDatos(centro) {
-            centro = "<h3 > Centro " +
-                centro.id +
-                "<small> Nombre: " +
-                centro.nombre +
-                "</small>" +
-                "<small> Calle: " +
-                centro.calle +
-                "</small>" +
-                "<small> Numero: " +
-                centro.numero +
-                "</small>" +
-                "</h3>";
-            $("#centro").hide();
-            $("#centro").empty();
-            $("#centro").append(centro);
-            $("#centro").show(500);
-        }
-*/
         // recibe el listado de centros a procesar
         function generarArrayDeCentrosPositions(centrosList) {
-            console.log("generando array de coordenadas de centros");
+            console.log("Generando array de coordenadas de centros");
 
             centrosList.forEach(function(centro) {
                 console.log("coordenada centro: " + centro.lat + ", " + centro.lon);
@@ -118,7 +132,7 @@ function centrosLoader(url) {
             self.finishedLoad = true;
         }
 
-        console.log("ejecutando request sobre url: " + url);
+        console.log("Ejecutando request sobre url: " + url);
         requestJSON(url , cargarMapa, this);
 
     }
