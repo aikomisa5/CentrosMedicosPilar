@@ -176,7 +176,7 @@ body {
     font-size: 3vh;
     -webkit-transition-duration: 0.4s;
     color: white;
-    margin-left: 35px;
+    margin-left: 0px;
     box-shadow: 5px 5px 5px #888;
     width: 100%
 }
