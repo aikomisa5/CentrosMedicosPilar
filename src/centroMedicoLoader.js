@@ -45,7 +45,8 @@ function centrosLoader(url) {
 
               marker = L.marker([centroMedico.position.lat, centroMedico.position.lon]);
 
-              marker.bindPopup("<b>"+centroMedico.nombre+"</b>"+"<br>"+centroMedico.calle + " " + centroMedico.numero).openPopup();
+              marker.bindPopup("<b>"+centroMedico.nombre+"</b>"+"<br>"+"Dirección: "+centroMedico.calle + " " + centroMedico.numero + " | " + "Localidad: " + centroMedico.localidad + " | " + "Tel: " + centroMedico.telefono + " | " + "Día y Horario At.: " + centroMedico.diasAtencion + " / "
+              +  centroMedico.horario + " | " + "Tipo Centro: "+ centroMedico.tipo).openPopup();
 
               centroLayer.addLayer(marker);
 
@@ -62,7 +63,8 @@ function centrosLoader(url) {
 
               marker = L.marker([centroMedico.position.lat, centroMedico.position.lon]);
 
-              marker.bindPopup("<b>"+centroMedico.nombre+"</b>"+"<br>"+centroMedico.calle + " " + centroMedico.numero).openPopup();
+              marker.bindPopup("<b>"+centroMedico.nombre+"</b>"+"<br>"+"Dirección: "+centroMedico.calle + " " + centroMedico.numero + " | " + "Localidad: " + centroMedico.localidad + " | " + "Tel: " + centroMedico.telefono + " | " + "Día y Horario At.: " + centroMedico.diasAtencion + " / "
+              +  centroMedico.horario + " | " + "Tipo Centro: "+ centroMedico.tipo).openPopup();
 
               centroLayer.addLayer(marker);
 
@@ -79,9 +81,10 @@ function centrosLoader(url) {
 
               marker = L.marker([centroMedico.position.lat, centroMedico.position.lon]);
 
-              marker.bindPopup("<b>"+centroMedico.nombre+"</b>"+"<br>"+centroMedico.calle + " " + centroMedico.numero).openPopup();
+              marker.bindPopup("<b>"+centroMedico.nombre+"</b>"+"<br>"+"Dirección: "+centroMedico.calle + " " + centroMedico.numero + " | " + "Localidad: " + centroMedico.localidad + " | " + "Tel: " + centroMedico.telefono + " | " + "Día y Horario At.: " + centroMedico.diasAtencion + " / "
+              +  centroMedico.horario + " | " + "Tipo Centro: "+ centroMedico.tipo).openPopup();
 
-              centroLayer.addLayer(marker);
+                  centroLayer.addLayer(marker);
 
               console.log("Guardando nuevo marcador");
               marcadores.push(marker);
@@ -159,8 +162,8 @@ function centrosLoader(url) {
                 centroMedico.addPosition(centro.coordinate.lat, centro.coordinate.lon);
                 marker = L.marker([centro.coordinate.lat, centro.coordinate.lon]);
 
-                marker.bindPopup("<b>"+centro.nombre+"</b>"+"<br>"+centro.calle + " " + centro.numero).openPopup();
-
+                marker.bindPopup("<b>"+centroMedico.nombre+"</b>"+"<br>"+"Dirección: "+centroMedico.calle + " " + centroMedico.numero + " | " + "Localidad: " + centroMedico.localidad + " | " + "Tel: " + centroMedico.telefono + " | " + "Día y Horario At.: " + centroMedico.diasAtencion + " / "
+                +  centroMedico.horario + " | " + "Tipo Centro: "+ centroMedico.tipo).openPopup();
                 centroLayer.addLayer(marker);
                 marcadores.push(marker);
                 centrosLista.push(centroMedico);
