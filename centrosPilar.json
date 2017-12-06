@@ -6,55 +6,76 @@
   },
   "centros": [
     {
-      "provincia": "Buenos Aires",
       "coordinate": {
-        "lat": -34.458055999999999,
-        "lon": -58.911324
+        "lat": -34.453139,
+        "lon": -59.005649
       },
-      "telefono2": "-",
-      "numero": 469,
-      "calle": "Hip\u00f3lito Yrigoyen",
-      "horario": "07-16",
+      "id": 1,
       "pais": "Argentina",
-      "localidad": "Pilar",
-      "nombre": "Hospital Odontologico MUNICIPAL PILAR",
-      "especialidad": "Odontología",
-      "telefono": "011 2332-5236",
-      "id": 1
+      "provincia": "Buenos Aires",
+      "localidad": "Manzanares",
+      "nombre": "Sala De Primeros Auxilios Angelina Manzanares",
+      "calle": "Alas Argentinas",
+      "numero": 75,
+      "diasAtencion": "Todos los días",
+      "horario": "24hs",
+      "telefono": "02320-4490702/4480604",
+      "tipo": "Público",
+      "especialidad": "Urología"
     },
     {
-      "provincia": "Buenos Aires",
       "coordinate": {
         "lat": -34.456313000000002,
         "lon": -58.913339000000001
       },
-      "telefono2": "-",
-      "numero": 446,
-      "calle": "Rivadavia",
-      "horario": "09-20",
+      "id": 1,
       "pais": "Argentina",
-      "localidad": "Pilar",
+      "provincia": "Buenos Aires",
+      "localidad": "-",
       "nombre": "Dental Total",
-      "especialidad": "Odontología",
+      "calle": "Rivadavia",
+      "numero": 446,
+      "diasAtencion": "-",
+      "horario": "09-20",
       "telefono": "0800-777-1919",
-      "id": 2
+      "tipo": "Privado",
+      "especialidad": "Odontología"
     },
     {
+      "coordinate": {
+        "lat": -34.458055999999999,
+        "lon": -58.911324
+      },
+      "id": 1,
+      "pais": "Argentina",
       "provincia": "Buenos Aires",
+      "localidad": "-",
+      "nombre": "Hospital Odontologico MUNICIPAL PILAR",
+      "calle": "Hip\u00f3lito Yrigoyen",
+      "numero": 469,
+      "diasAtencion": "-",
+      "horario": "-",
+      "telefono": "011 2332-5236",
+      "tipo": "Público",
+      "especialidad": "Odontología"
+    },
+    {
       "coordinate": {
         "lat": -34.458569,
         "lon": -58.911514
       },
-      "telefono2": "-",
-      "numero": 446,
-      "calle": "Bolivar",
-      "horario": "-",
+      "id": 1,
       "pais": "Argentina",
-      "localidad": "Pilar",
+      "provincia": "Buenos Aires",
+      "localidad": "-",
       "nombre": "Centro Médico Urológico Bolivar",
-      "especialidad": "Urología",
+      "calle": "Bolivar",
+      "numero": 446,
+      "diasAtencion": "-",
+      "horario": "-",
       "telefono": "-",
-      "id": 3
+      "tipo": "-",
+      "especialidad": "Urología"
     }
   ]
 }

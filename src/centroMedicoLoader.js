@@ -38,7 +38,7 @@ function centrosLoader(url) {
 
             if (centroMedico.especialidad == tipo){
 
-            resultados.push(new Array(centroMedico.id, centroMedico.nombre, centroMedico.calle + centroMedico.numero, centroMedico.telefono, "10", centroMedico.horario));
+            resultados.push(new Array(centroMedico.nombre, centroMedico.calle + " " + centroMedico.numero, centroMedico.localidad, centroMedico.telefono, "-", centroMedico.diasAtencion + "/" + centroMedico.horario, centroMedico.tipo));
 
               marker = L.marker([centroMedico.position.lat, centroMedico.position.lon]);
 
