@@ -145,6 +145,210 @@ function centrosLoader(url) {
         return estado;
       }
 
+      this.cargarCombo1= function(){
+        var options = [
+          {
+            "text"  : "Seleccione..",
+            "value" : "Seleccione",
+            "selected" : true
+          },
+          {
+            "text"  : "Alergología",
+            "value" : "Alergología"
+          },
+          {
+            "text"  : "Anestesiología y reanimación",
+            "value" : "Anestesiología y reanimación",
+          },
+          {
+            "text"  : "Cardiología",
+            "value" : "Cardiología",
+          },
+          {
+            "text"  : "Gastroenterología",
+            "value" : "Gastroenterología",
+          },
+          {
+            "text"  : "Endocrinología",
+            "value" : "Endocrinología",
+          },
+          {
+            "text"  : "Geriatría",
+            "value" : "Geriatría",
+          },
+          {
+            "text"  : "Hematología y hemoterapia",
+            "value" : "Hematología y hemoterapia",
+          },
+          {
+            "text"  : "Infectología",
+            "value" : "Infectología",
+          },
+          {
+            "text"  : "Nefrología",
+            "value" : "Nefrología",
+          },
+          {
+            "text"  : "Neumología",
+            "value" : "Neumología",
+          },
+          {
+            "text"  : "Neurología",
+            "value" : "Neurología",
+          },
+          {
+            "text"  : "Nutriología",
+            "value" : "Nutriología",
+          },
+          {
+            "text"  : "Oftalmología",
+            "value" : "Oftalmología",
+          },
+          {
+            "text"  : "Oncología médica",
+            "value" : "Oncología médica",
+          },
+          {
+            "text"  : "Oncología radioterápica",
+            "value" : "Oncología radioterápica",
+          },
+          {
+            "text"  : "Pediatría",
+            "value" : "Pediatría",
+          },
+          {
+            "text"  : "Psiquiatría",
+            "value" : "Psiquiatría",
+          },
+          {
+            "text"  : "Rehabilitación",
+            "value" : "Rehabilitación",
+          },
+          {
+            "text"  : "Reumatología",
+            "value" : "Reumatología",
+          },
+          {
+            "text"  : "Toxicología",
+            "value" : "Toxicología",
+          },
+          {
+            "text"  : "Urología",
+            "value" : "Urología"
+          }
+        ];
+        return options;
+      }
+
+      this.cargarCombo2 = function(){
+        var options2 = [
+          {
+            "text"  : "Seleccione..",
+            "value" : "Seleccione",
+            "selected" : true
+          },
+          {
+            "text"  : "Cirugía cardiovascular",
+            "value" : "Cirugía cardiovascular"
+          },
+          {
+            "text"  : "Cirugía general y del aparato digestivo",
+            "value" : "Cirugía general y del aparato digestivo",
+          },
+          {
+            "text"  : "Cirugía oral y maxilofacial",
+            "value" : "Cirugía oral y maxilofacial",
+          },
+          {
+            "text"  : "Cirugía ortopédica y traumatología",
+            "value" : "Cirugía ortopédica y traumatología",
+          },
+          {
+            "text"  : "Cirugía pediátrica",
+            "value" : "Cirugía pediátrica",
+          },
+          {
+            "text"  : "Cirugía plástica, estética y reparadora",
+            "value" : "Cirugía plástica, estética y reparadora",
+          },
+          {
+            "text"  : "Cirugía torácica",
+            "value" : "Cirugía torácica",
+          },
+          {
+            "text"  : "Neurocirugía",
+            "value" : "Neurocirugía",
+          },
+          {
+            "text"  : "Proctología",
+            "value" : "Proctología"
+          }
+        ];
+        return options2;
+      }
+
+      this.cargarCombo3 = function(){
+        var options3 = [
+          {
+            "text"  : "Seleccione..",
+            "value" : "Seleccione",
+            "selected" : true
+          },
+          {
+            "text"  : "Angiología y cirugía vascular",
+            "value" : "Angiología y cirugía vascular"
+          },
+          {
+            "text"  : "Dermatología médico-quirúrgica y venereología",
+            "value" : "Dermatología médico-quirúrgica y venereología",
+          },
+          {
+            "text"  : "Odontología",
+            "value" : "Odontología",
+          },
+          {
+            "text"  : "Ginecología y obstetricia o tocología",
+            "value" : "Ginecología y obstetricia o tocología",
+          },
+          {
+            "text"  : "Oftalmología",
+            "value" : "Oftalmología",
+          },
+          {
+            "text"  : "Otorrinolaringología",
+            "value" : "Otorrinolaringología",
+          },
+          {
+            "text"  : "Urología",
+            "value" : "Urología",
+          },
+          {
+            "text"  : "Traumatología",
+            "value" : "Traumatología"
+          }
+        ];
+        return options3;
+      }
+
+      this.cargarCombo4 = function(){
+        var options4 = [
+          {
+            "text"  : "Seleccione..",
+            "value" : "Seleccione",
+            "selected" : true
+          },
+          {
+            "text"  : "Público",
+            "value" : "Público",
+          },
+          {
+            "text"  : "Privado",
+            "value" : "Privado"
+          }
+        ];
+        return options4;
+      }
+
 
     this.loadCentros = function(map) {
         // recibe el listado de centros a procesar

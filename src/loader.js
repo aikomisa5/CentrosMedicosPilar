@@ -42,206 +42,21 @@ function bootstrap() {
 
 
      var optionList = document.getElementById('rec_mode').options;
-      var options = [
-        {
-          "text"  : "Seleccione..",
-          "value" : "Seleccione",
-          "selected" : true
-        },
-        {
-          "text"  : "Alergología",
-          "value" : "Alergología"
-        },
-        {
-          "text"  : "Anestesiología y reanimación",
-          "value" : "Anestesiología y reanimación",
-        },
-        {
-          "text"  : "Cardiología",
-          "value" : "Cardiología",
-        },
-        {
-          "text"  : "Gastroenterología",
-          "value" : "Gastroenterología",
-        },
-        {
-          "text"  : "Endocrinología",
-          "value" : "Endocrinología",
-        },
-        {
-          "text"  : "Geriatría",
-          "value" : "Geriatría",
-        },
-        {
-          "text"  : "Hematología y hemoterapia",
-          "value" : "Hematología y hemoterapia",
-        },
-        {
-          "text"  : "Infectología",
-          "value" : "Infectología",
-        },
-        {
-          "text"  : "Nefrología",
-          "value" : "Nefrología",
-        },
-        {
-          "text"  : "Neumología",
-          "value" : "Neumología",
-        },
-        {
-          "text"  : "Neurología",
-          "value" : "Neurología",
-        },
-        {
-          "text"  : "Nutriología",
-          "value" : "Nutriología",
-        },
-        {
-          "text"  : "Oftalmología",
-          "value" : "Oftalmología",
-        },
-        {
-          "text"  : "Oncología médica",
-          "value" : "Oncología médica",
-        },
-        {
-          "text"  : "Oncología radioterápica",
-          "value" : "Oncología radioterápica",
-        },
-        {
-          "text"  : "Pediatría",
-          "value" : "Pediatría",
-        },
-        {
-          "text"  : "Psiquiatría",
-          "value" : "Psiquiatría",
-        },
-        {
-          "text"  : "Rehabilitación",
-          "value" : "Rehabilitación",
-        },
-        {
-          "text"  : "Reumatología",
-          "value" : "Reumatología",
-        },
-        {
-          "text"  : "Toxicología",
-          "value" : "Toxicología",
-        },
-        {
-          "text"  : "Urología",
-          "value" : "Urología"
-        }
-      ];
+     var options = centroMedicoLoader.cargarCombo1();
 
       options.forEach( (option) => optionList.add( new Option(option.text, option.value, option.selected ) ));
 
       var optionList2 = document.getElementById('rec_mode2').options;
-       var options2 = [
-         {
-           "text"  : "Seleccione..",
-           "value" : "Seleccione",
-           "selected" : true
-         },
-         {
-           "text"  : "Cirugía cardiovascular",
-           "value" : "Cirugía cardiovascular"
-         },
-         {
-           "text"  : "Cirugía general y del aparato digestivo",
-           "value" : "Cirugía general y del aparato digestivo",
-         },
-         {
-           "text"  : "Cirugía oral y maxilofacial",
-           "value" : "Cirugía oral y maxilofacial",
-         },
-         {
-           "text"  : "Cirugía ortopédica y traumatología",
-           "value" : "Cirugía ortopédica y traumatología",
-         },
-         {
-           "text"  : "Cirugía pediátrica",
-           "value" : "Cirugía pediátrica",
-         },
-         {
-           "text"  : "Cirugía plástica, estética y reparadora",
-           "value" : "Cirugía plástica, estética y reparadora",
-         },
-         {
-           "text"  : "Cirugía torácica",
-           "value" : "Cirugía torácica",
-         },
-         {
-           "text"  : "Neurocirugía",
-           "value" : "Neurocirugía",
-         },
-         {
-           "text"  : "Proctología",
-           "value" : "Proctología"
-         }
-       ];
+      var options2 = centroMedicoLoader.cargarCombo2();
 
        options2.forEach( (option) => optionList2.add( new Option(option.text, option.value, option.selected ) ));
 
        var optionList3 = document.getElementById('rec_mode3').options;
-        var options3 = [
-          {
-            "text"  : "Seleccione..",
-            "value" : "Seleccione",
-            "selected" : true
-          },
-          {
-            "text"  : "Angiología y cirugía vascular",
-            "value" : "Angiología y cirugía vascular"
-          },
-          {
-            "text"  : "Dermatología médico-quirúrgica y venereología",
-            "value" : "Dermatología médico-quirúrgica y venereología",
-          },
-          {
-            "text"  : "Odontología",
-            "value" : "Odontología",
-          },
-          {
-            "text"  : "Ginecología y obstetricia o tocología",
-            "value" : "Ginecología y obstetricia o tocología",
-          },
-          {
-            "text"  : "Oftalmología",
-            "value" : "Oftalmología",
-          },
-          {
-            "text"  : "Otorrinolaringología",
-            "value" : "Otorrinolaringología",
-          },
-          {
-            "text"  : "Urología",
-            "value" : "Urología",
-          },
-          {
-            "text"  : "Traumatología",
-            "value" : "Traumatología"
-          }
-        ];
-
+       var options3 = centroMedicoLoader.cargarCombo3();
         options3.forEach( (option) => optionList3.add( new Option(option.text, option.value, option.selected ) ));
 
         var optionList4 = document.getElementById('tipoCentroSalud').options;
-         var options4 = [
-           {
-             "text"  : "Seleccione..",
-             "value" : "Seleccione",
-             "selected" : true
-           },
-           {
-             "text"  : "Público",
-             "value" : "Público",
-           },
-           {
-             "text"  : "Privado",
-             "value" : "Privado"
-           }
-         ];
+        var options4 = centroMedicoLoader.cargarCombo4();
 
          options4.forEach( (option) => optionList4.add( new Option(option.text, option.value, option.selected ) ));
 
@@ -255,29 +70,19 @@ function bootstrap() {
                 centroMedicoLoader.obtenerResultados();
                 if (centroMedicoLoader.seEncontraronResultados() == true){
                   var alertaOkey = "<div class=\"alert alert-success alert-dismissable fade in\">" +
-    "\<a href=\"#\" class=\"close\" data-dismiss=\"alert\" aria-label=\"close\">&times\;</a>"+
-    "<strong></strong> Se han encontrado centros de salud con esas características!</div>";
-    $("#aviso").append(alertaOkey).show(500);
+                  "\<a href=\"#\" class=\"close\" data-dismiss=\"alert\" aria-label=\"close\">&times\;</a>"+
+                  "<strong></strong> Se han encontrado centros de salud con esas características!</div>";
+                  $("#aviso").append(alertaOkey).show(500);
                 }
                 else{
                   var alerta = "<div class=\"alert alert-danger alert-dismissable fade in\">" +
-      "\<a href=\"#\" class=\"close\" data-dismiss=\"alert\" aria-label=\"close\">&times\;</a>" +
-      "<strong></strong> No se han encontrado centros de salud con esas características, lo siento.</div>";
-      $("#aviso").append(alerta).show(500);
+                  "\<a href=\"#\" class=\"close\" data-dismiss=\"alert\" aria-label=\"close\">&times\;</a>" +
+                  "<strong></strong> No se han encontrado centros de salud con esas características, lo siento.</div>";
+                  $("#aviso").append(alerta).show(500);
                 }
-
-                //$("#runners").show(500);
             } else {
                 console.log("carga incompleta");
-                // un warning de bootstrap para indicar que la carga no ha finalizado /
-
-
-                var alert = "<div class=\"alert alert-warning alert-dismissable\">" +
-                    "\<a href=\"#\" class=\"close\" data-dismiss=\"alert\" aria-label=\"close\">×</a>" +
-                    "<strong>Atención!</strong> No se han cargado todos los elementos en el mapa.</div>";
-                $("#aviso").append(alert).show(500); //y aca le decimos a jquery que lo cargue en el html
-
-            }
+          }
         });
     });
 
