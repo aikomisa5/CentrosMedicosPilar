@@ -226,13 +226,32 @@ function bootstrap() {
 
         options3.forEach( (option) => optionList3.add( new Option(option.text, option.value, option.selected ) ));
 
+        var optionList4 = document.getElementById('tipoCentroSalud').options;
+         var options4 = [
+           {
+             "text"  : "Seleccione..",
+             "value" : "Seleccione",
+             "selected" : true
+           },
+           {
+             "text"  : "Público",
+             "value" : "Público",
+           },
+           {
+             "text"  : "Privado",
+             "value" : "Privado"
+           }
+         ];
+
+         options4.forEach( (option) => optionList4.add( new Option(option.text, option.value, option.selected ) ));
+
 
     $(document).ready(function() { // si se termino de cargar todo el html
         $("#myBtn").click(function() {
             if (cargaFinalizada()) {
               var valorTipo = obtenerValorDeCombo();
-              /*var valorTipo = $( "#rec_mode option:selected" ).text();*/
-                centroMedicoLoader.cargarCentrosPorTipo(valorTipo, map);
+              var valorTipoCentro = $( "#tipoCentroSalud option:selected" ).text();
+                centroMedicoLoader.cargarCentrosPorTipo(valorTipo, valorTipoCentro, map);
                 centroMedicoLoader.obtenerResultados();
                 //$("#runners").show(500);
             } else {
@@ -304,6 +323,9 @@ function bootstrap() {
       }
       else if (valor3 != "Seleccione.."){
         return valor3;
+      }
+      else {
+        return "Seleccione..";
       }
     }
 }

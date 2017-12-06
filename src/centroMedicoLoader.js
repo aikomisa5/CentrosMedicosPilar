@@ -12,7 +12,7 @@ function centrosLoader(url) {
 
 
 
-    this.cargarCentrosPorTipo = function (tipo, map){
+    this.cargarCentrosPorTipo = function (tipo, tipoCentro, map){
       console.log("Inicializando resultados en 0");
       resultados = [];
       this.indice=0;
@@ -37,7 +37,9 @@ function centrosLoader(url) {
             centroMedico.addPosition(cent.position.lat, cent.position.lon);
             console.log("Datos del Centro: "+centroMedico.showDetails());
 
-            if (centroMedico.especialidad == tipo){
+            if (tipoCentro != "Seleccione.."){
+            if (centroMedico.especialidad == tipo && centroMedico.tipo == tipoCentro){
+              console.log("SOY IF 1");
 
             resultados.push(new Array(centroMedico.nombre, centroMedico.calle + " " + centroMedico.numero, centroMedico.localidad, centroMedico.telefono, "-", centroMedico.diasAtencion + "/" + centroMedico.horario, centroMedico.tipo));
 
@@ -52,6 +54,41 @@ function centrosLoader(url) {
 
               console.log("Existe un centro con esa especialidad");
             }
+          }
+          if (tipo == "Seleccione.."){
+           if (centroMedico.tipo == tipoCentro){
+            console.log("SOY IF 2");
+            resultados.push(new Array(centroMedico.nombre, centroMedico.calle + " " + centroMedico.numero, centroMedico.localidad, centroMedico.telefono, "-", centroMedico.diasAtencion + "/" + centroMedico.horario, centroMedico.tipo));
+
+              marker = L.marker([centroMedico.position.lat, centroMedico.position.lon]);
+
+              marker.bindPopup("<b>"+centroMedico.nombre+"</b>"+"<br>"+centroMedico.calle + " " + centroMedico.numero).openPopup();
+
+              centroLayer.addLayer(marker);
+
+              console.log("Guardando nuevo marcador");
+              marcadores.push(marker);
+
+              console.log("Existe un centro con esa especialidad");
+          }
+        }
+          if (tipoCentro == "Seleccione.."){
+            if (centroMedico.especialidad == tipo){
+            console.log("SOY IF 3");
+            resultados.push(new Array(centroMedico.nombre, centroMedico.calle + " " + centroMedico.numero, centroMedico.localidad, centroMedico.telefono, "-", centroMedico.diasAtencion + "/" + centroMedico.horario, centroMedico.tipo));
+
+              marker = L.marker([centroMedico.position.lat, centroMedico.position.lon]);
+
+              marker.bindPopup("<b>"+centroMedico.nombre+"</b>"+"<br>"+centroMedico.calle + " " + centroMedico.numero).openPopup();
+
+              centroLayer.addLayer(marker);
+
+              console.log("Guardando nuevo marcador");
+              marcadores.push(marker);
+
+              console.log("Existe un centro con esa especialidad");
+            }
+          }
             else {
               console.log("Uno de los centros no es de la especialidad elegida");
             }
@@ -105,7 +142,7 @@ function centrosLoader(url) {
                 console.log("coordenada centro: " + centro.lat + ", " + centro.lon);
                 latlngs.push([centro.lat, centro.lon]);
                 centrosLista.push([new centroMedico(centro.id, centro.nombre, centro.especialidad, centro.telefono, centro.telefono2, centro.horario,
-                centro.pais, centro.provincia, centro.localidad, centro.calle, centro.numero)]);
+                centro.pais, centro.provincia, centro.localidad, centro.calle, centro.numero, centro.diasAtencion,centro.tipo)]);
             });
         }
 
@@ -118,7 +155,7 @@ function centrosLoader(url) {
             console.log("Añadiendo Centros Medicos al Mapa");
             centrosListResponse.centros.forEach(function(centro) {
                 var centroMedico = new CentroMedico(centro.id, centro.nombre, centro.especialidad, centro.telefono, centro.telefono2, centro.horario,
-                centro.pais, centro.provincia, centro.localidad, centro.calle, centro.numero);
+                centro.pais, centro.provincia, centro.localidad, centro.calle, centro.numero,centro.diasAtencion,centro.tipo);
                 centroMedico.addPosition(centro.coordinate.lat, centro.coordinate.lon);
                 marker = L.marker([centro.coordinate.lat, centro.coordinate.lon]);
 
