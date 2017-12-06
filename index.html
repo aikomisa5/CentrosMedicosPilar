@@ -46,6 +46,9 @@
 
 <body>
 
+<div class="fondo">
+</div>
+
   <div id="contenedor">
     <!--<div class="banner">
     </div>-->
@@ -63,13 +66,18 @@
       background-position: center;
       background-size:auto;
       margin-right: 90px;
+
+      animation: body 10s infinite;
+      animation-direction: alternate;
+      animation-duration: 30s;
     }
     h3 {
         color: white;
         text-align: center;
     }
     p{
-      color: white;
+      font-weight: bold;
+      color: #ffffff;
     }
     h2{
       color: white;
@@ -106,7 +114,9 @@
     <div class="col-sm-8 text-left">
       <h1 id="fuente2">Centros de Salud de Pilar</h1>
       <hr>
-      <p id="centrado">Bienvenido al sistema de datos de centros de salud ubicados en el partido de Pilar</p>
+      <div class="transbox">
+      <p>Bienvenido al sistema de datos de centros de salud ubicados en el partido de Pilar</p>
+    </div>
       <hr>
       <div class="row" id="combos">
       <div class="col-sm-6">

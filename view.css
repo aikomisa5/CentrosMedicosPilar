@@ -48,11 +48,30 @@ body {
   color: white;
 }
 
-#centrado{
-  font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+.transbox{
+
+  background-image: url(img/celeste.png);
+
   text-align: center;
   font-size: 3.5vh;
-  color: black;
+  font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+
+  /*background-color:#0099cc;*/
+   /*opacity: 0.6;*/
+   border: solid;
+   border-color: black;
+   padding: 8px 8px;
+   -webkit-transition-duration: 0.4s;
+   border-radius: 10px;
+   width: 100%;
+  /*background-color: #ffffff;*/
+  border: 1px solid black;
+  /*filter: alpha(opacity=60); /* For IE8 and earlier */
+}
+
+.p {
+    font-weight: bold;
+    color: #000000;
 }
 
 #fuente{
@@ -73,7 +92,8 @@ body {
   font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
   color: white;
   /*background-color:#0099cc;*/
-   background-color:#000000;
+  background-image: url(img/celeste.png);
+
    border-radius: 3px;
    border: solid;
    border-color: black;
@@ -213,6 +233,27 @@ body {
    width: 100%
 }
 
+@keyframes body {
+  0%,30%{
+    background-image: url(img/hojas.jpg);
+    opacity: 1;
+  }
+  31%,34%{
+    opacity: 2.0;
+  }
+  35%, 65%{
+    background-image: url(img/aurora.jpg);
+    opacity: 1;
+  }
+  66%,69%{
+    opacity: 2.0;
+  }
+  70%,100%{
+      background-image: url(img/road.jpg);
+      opacity: 1;
+  }
+}
+
 #tipoCentroSalud{
   display: flex;
   background-color:#ff6699;
@@ -287,7 +328,7 @@ body {
    color: white;
    padding: 8px 8px;
    text-align: center;
-   background-color: black;
+   background-image: url(img/celeste.png);
 }
 
 .banner{
