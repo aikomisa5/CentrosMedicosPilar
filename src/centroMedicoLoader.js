@@ -6,6 +6,7 @@ function centrosLoader(url) {
     var marker;
     var marcadores = [];
     var resultados = [];
+    var estado;
     //var resultados = new Array();
     var indice = 0;
     this.finishedLoad = false;
@@ -15,6 +16,7 @@ function centrosLoader(url) {
     this.cargarCentrosPorTipo = function (tipo, tipoCentro, map){
       console.log("Inicializando resultados en 0");
       resultados = [];
+      estado=false;
       this.indice=0;
       marcadores.forEach(function(mark){
         console.log("Borrando marcadores");
@@ -100,6 +102,7 @@ function centrosLoader(url) {
 
       this.obtenerResultados = function(){
         if (resultados.length != 0){
+          estado=true;
           console.log("Hay resultados de centros con esa especialidad: Cantidad: " + resultados.length);
         for (i = 0; i < resultados.length; i++) {
             for (j = 0; j < resultados[i].length; j++) {
@@ -109,6 +112,7 @@ function centrosLoader(url) {
           }
         }
         else{
+          estado=false;
           console.log("No hay resultados de centros de esa especialidad!")
         }
 
@@ -132,7 +136,13 @@ function centrosLoader(url) {
               tableBody.appendChild(tr);
           }
 
+           $('#aviso').children('.alert:first-child').remove();
 
+
+      }
+
+      this.seEncontraronResultados = function(){
+        return estado;
       }
 
 

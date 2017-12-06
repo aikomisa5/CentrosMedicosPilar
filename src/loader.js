@@ -253,10 +253,25 @@ function bootstrap() {
               var valorTipoCentro = $( "#tipoCentroSalud option:selected" ).text();
                 centroMedicoLoader.cargarCentrosPorTipo(valorTipo, valorTipoCentro, map);
                 centroMedicoLoader.obtenerResultados();
+                if (centroMedicoLoader.seEncontraronResultados() == true){
+                  var alertaOkey = "<div class=\"alert alert-success alert-dismissable fade in\">" +
+    "\<a href=\"#\" class=\"close\" data-dismiss=\"alert\" aria-label=\"close\">&times\;</a>"+
+    "<strong></strong> Se han encontrado centros de salud con esas características!</div>";
+    $("#aviso").append(alertaOkey).show(500);
+                }
+                else{
+                  var alerta = "<div class=\"alert alert-danger alert-dismissable fade in\">" +
+      "\<a href=\"#\" class=\"close\" data-dismiss=\"alert\" aria-label=\"close\">&times\;</a>" +
+      "<strong></strong> No se han encontrado centros de salud con esas características, lo siento.</div>";
+      $("#aviso").append(alerta).show(500);
+                }
+
                 //$("#runners").show(500);
             } else {
                 console.log("carga incompleta");
                 // un warning de bootstrap para indicar que la carga no ha finalizado /
+
+
                 var alert = "<div class=\"alert alert-warning alert-dismissable\">" +
                     "\<a href=\"#\" class=\"close\" data-dismiss=\"alert\" aria-label=\"close\">×</a>" +
                     "<strong>Atención!</strong> No se han cargado todos los elementos en el mapa.</div>";
