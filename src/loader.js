@@ -20,7 +20,7 @@ function bootstrap() {
     var centrosMedicosSource = "https://raw.githubusercontent.com/aikomisa5/CentrosMedicosPilar/master/centrosPilar.json";
 
     // Creación del componente mapa de Leaflet.
-    var map = L.map("mapid").setView([-34.458431, -58.914743], 14); // no se declara var para que sea global a todas las clases.
+    var map = L.map("mapid").setView([-34.458431, -58.914743], 12); // no se declara var para que sea global a todas las clases.
 
     // Agregamos los Layers de OpenStreetMap.
     var baseLayer = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
