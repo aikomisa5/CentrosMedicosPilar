@@ -1,4 +1,4 @@
-var CentroMedico = function(id, nombre, especialidad, telefono, telefono2, horario, pais, provincia, localidad, calle, numero) {
+var CentroMedico = function(id, nombre, especialidad, telefono, telefono2, horario, pais, provincia, localidad, calle, numero, diasAtencion, tipo) {
 
     this.id = id;
     this.nombre = nombre;
@@ -11,6 +11,8 @@ var CentroMedico = function(id, nombre, especialidad, telefono, telefono2, horar
     this.localidad = localidad;
     this.calle = calle;
     this.numero = numero;
+    this.diasAtencion = diasAtencion;
+    this.tipo = tipo;
     this.position;
     this.historyPositions = [];
     this.addPosition = function(lat, lon) {

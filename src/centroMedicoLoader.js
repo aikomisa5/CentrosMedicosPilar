@@ -31,7 +31,8 @@ function centrosLoader(url) {
 
         centrosLista.forEach(function(cent) {
           var centroMedico = new CentroMedico(cent.id, cent.nombre, cent.especialidad,
-                cent.telefono, cent.telefono2, cent.horario, cent.pais, cent.provincia, cent.localidad, cent.calle, cent.numero
+                cent.telefono, cent.telefono2, cent.horario, cent.pais, cent.provincia, cent.localidad, cent.calle, cent.numero,
+                cent.diasAtencion, cent.tipo
             );
             centroMedico.addPosition(cent.position.lat, cent.position.lon);
             console.log("Datos del Centro: "+centroMedico.showDetails());
