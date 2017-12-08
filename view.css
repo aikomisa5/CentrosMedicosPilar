@@ -48,6 +48,13 @@ body {
   width: 0 auto;
 }
 
+#tablaCentrosMain{
+  font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+  font-size:large;
+  color: black;
+  width: 0 auto;
+}
+
 #negro{
   color:black;
 }
@@ -78,13 +85,10 @@ body {
 }
 
 .transbox{
-
   background-image: url(img/celeste.png);
-
   text-align: center;
   font-size: 3.5vh;
   font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
-
   /*background-color:#0099cc;*/
    /*opacity: 0.6;*/
    border: solid;
@@ -353,10 +357,12 @@ body {
 
 #combos{
   display: flex;
+  flex-wrap: wrap;
 }
 
 #combos2{
   display: flex;
+  flex-wrap: wrap;
 }
 
 #columnasTabla{
@@ -441,4 +447,117 @@ body {
 #btnColectivo:hover {
    background-color: #003366;
     color: white;
+}
+
+
+
+@media (min-width: 240px) {
+    .container {
+      width: auto;
+      margin: 0 auto;
+    }
+    .container hr{
+      width: 30%;
+    }
+
+    .transbox {
+      width: 30%;
+    }
+
+    #fuente2{
+      width: 30%;
+    }
+
+    #combos{
+      width: 30%;
+    }
+    #combos2{
+      width: 30%;
+    }
+    #mapid{
+      width: 30%;
+    }
+    #links{
+      width: 30%;
+    }
+
+    #tablaCentrosMain *{
+      width: 30%;
+    }
+
+    #mapaCol{
+      width: 30%
+    }
+}
+
+@media (min-width: 740px) {
+    .container {
+      width: 1100px;
+      margin: 0 auto;
+    }
+    .container hr{
+      width: 70%;
+    }
+    .transbox {
+      width: 70%;
+    }
+
+    #fuente2{
+      width: 70%;
+    }
+    #combos{
+      width: 70%;
+    }
+    #combos2{
+      width: 70%;
+    }
+    #mapid{
+      width: 70%;
+    }
+    #links{
+      width: 70%;
+    }
+    #tablaCentrosMain *{
+      width: 70%;
+    }
+
+    #mapaCol{
+      width: 70%
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+      width: 1200px;
+      margin: 0 auto;
+    }
+    .container hr{
+      width: 100%;
+    }
+    .transbox {
+      width: 100%;
+    }
+
+    #fuente2{
+      width: 100%;
+    }
+    #combos{
+      width: 100%;
+    }
+    #combos2{
+      width: 100%;
+    }
+    #mapid{
+      width: 100%;
+    }
+    #links{
+      width: 100%;
+    }
+    #tablaCentrosMain *{
+      width: 100%;
+    }
+
+    #mapaCol{
+      width: 100%
+    }
 }
