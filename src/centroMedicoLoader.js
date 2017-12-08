@@ -394,7 +394,7 @@ function centrosLoader(url) {
 
       this.obtenerDatosColectivo = function(nombreColectivo){
         var lineaElegida = nombreColectivo;
-        var tituloLinea = "<h2 class = \"tituloLineaMap\" id=\"fuente2\">Mapa de la línea de colectivo elegida</h2>";
+        var tituloLinea = "<h2 class = \"tituloLineaMap\" id=\"fuente2\">Mapa de la línea de colectivo elegida</h2><hr>";
         //remueve el frame del mapa de la línea de colectivo elegida, porque si no se generan frames infinitos
         $("iframe").remove(".mapaLinea");
 
