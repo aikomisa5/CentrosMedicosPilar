@@ -143,6 +143,23 @@ body {
    border-radius: 10px;
    width: 100%
 }
+#fuenteSugerencia{
+  font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+  color: yellow;
+  /*background-color:#0099cc;*/
+  background-image: url(img/celeste.png);
+
+   border-radius: 3px;
+   border: solid;
+   border-color: black;
+   padding: 8px 8px;
+   text-decoration: none;
+   font-size: 85%;
+   -webkit-transition-duration: 0.4s;
+   text-align: left;
+   border-radius: 10px;
+   width: 100%
+}
 
 #links{
   background-color:#000000;
@@ -390,7 +407,7 @@ body {
 }
 
 #tablaBody{
-
+   font-size: 80%;
    border-radius: 0px;
    border: solid;
    border-color: black;
@@ -454,39 +471,47 @@ body {
 @media (min-width: 240px) {
     .container {
       width: auto;
-      margin: 0 auto;
+      /*margin: 0 auto;*/
     }
     .container hr{
-      width: 30%;
+      width: 80%;
     }
 
     .transbox {
-      width: 30%;
+      width: 80%;
+    }
+
+    .body {
+      margin-right: 0px;
     }
 
     #fuente2{
-      width: 30%;
+      width: 80%;
     }
 
     #combos{
-      width: 30%;
+      width: 80%;
     }
     #combos2{
-      width: 30%;
+      width: 80%;
     }
     #mapid{
-      width: 30%;
+      width: 80%;
     }
     #links{
-      width: 30%;
+      width: 80%;
     }
 
     #tablaCentrosMain *{
-      width: 30%;
+      width: 80%;
     }
 
     #mapaCol{
-      width: 30%
+      width: 80%
+    }
+    #contenedor{
+      width: 400px;
+      margin: 0 auto;
     }
 }
 
@@ -524,6 +549,12 @@ body {
     #mapaCol{
       width: 70%
     }
+    #contenedor{
+      width: 700px;
+      margin: 0 auto;
+    }
+
+
 }
 
 @media (min-width: 1024px) {
@@ -559,5 +590,9 @@ body {
 
     #mapaCol{
       width: 100%
+    }
+    #contenedor{
+      width: 800px;
+      margin: 0 auto;
     }
 }
