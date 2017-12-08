@@ -181,8 +181,8 @@ body {
    /*margin: auto;*/
 }
 
-#especialidad{
-  background-color: #660066;
+#lineaColectivoLabel{
+  background-color: #000000;
    border-radius: 10px;
    border: none;
    color: white;
@@ -195,6 +195,83 @@ body {
    margin-bottom: 0px;
    width: 100%
 }
+
+#especialidad{
+  background-color: #990099;
+   border-radius: 10px;
+   border: none;
+   color: white;
+   padding: 8px 8px;
+   text-align: center;
+   text-decoration: none;
+   font-size: 2.6vh;
+   -webkit-transition-duration: 0.4s;
+   color: white;
+   margin-bottom: 0px;
+   width: 100%
+}
+
+#especialidadClinica{
+  background-color: #339966;
+   border-radius: 10px;
+   border: none;
+   color: white;
+   padding: 8px 8px;
+   text-align: center;
+   text-decoration: none;
+   font-size: 2.6vh;
+   -webkit-transition-duration: 0.4s;
+   color: white;
+   margin-bottom: 0px;
+   width: 100%
+}
+
+#especialidadClinicaCombo{
+  background-color:#339966;
+   border-radius: 10px;
+   border: none;
+   color: black;
+   padding: 8px 8px;
+   text-align: center;
+   text-decoration: none;
+   font-size: 2.6vh;
+   -webkit-transition-duration: 0.4s;
+   color: black;
+   margin-bottom: 21px;
+   box-shadow: 5px 5px 5px #888;
+   width: 100%
+}
+
+#especialidadQuirurgica{
+  background-color: #ff6600;
+   border-radius: 10px;
+   border: none;
+   color: white;
+   padding: 8px 8px;
+   text-align: center;
+   text-decoration: none;
+   font-size: 2.6vh;
+   -webkit-transition-duration: 0.4s;
+   color: white;
+   margin-bottom: 0px;
+   width: 100%
+}
+
+#especialidadMedicoQuirurgicas{
+  background-color: #ff6699;
+   border-radius: 10px;
+   border: none;
+   color: white;
+   padding: 8px 8px;
+   text-align: center;
+   text-decoration: none;
+   font-size: 2.6vh;
+   -webkit-transition-duration: 0.4s;
+   color: white;
+   margin-bottom: 0px;
+   width: 100%
+}
+
 
 #especialidad2{
   background-color:#ff6699;
@@ -246,7 +323,7 @@ body {
 }
 #rec_mode{
   display: flex;
-  background-color:#ff6699;
+  background-color:#339966;
    border-radius: 10px;
    border: none;
    color: white;
@@ -262,7 +339,7 @@ body {
 }
 #rec_mode2{
   display: flex;
-  background-color:#ff6699;
+  background-color:#ff6600;
    border-radius: 10px;
    border: none;
    color: white;
@@ -279,7 +356,7 @@ body {
 
 #comboColectivos{
   display: flex;
-  background-color:#ff6699;
+  background-color:#000000;
    border-radius: 10px;
    border: none;
    color: white;
@@ -332,7 +409,7 @@ body {
 
 #tipoCentroSalud{
   display: flex;
-  background-color:#ff6699;
+  background-color: #990099;
    border-radius: 10px;
    border: none;
    color: white;
@@ -348,17 +425,17 @@ body {
 }
 
 #tipoCentroSalud:hover{
-  background-color: #cc0044;
+  background-color: #660066;
   color: white;
 }
 
 #rec_mode:hover{
-  background-color: #cc0044;
+  background-color: #26734d;
   color: white;
 }
 
 #rec_mode2:hover{
-  background-color: #cc0044;
+  background-color: #b34700;
   color: white;
 }
 
@@ -368,7 +445,7 @@ body {
 }
 
 #comboColectivos:hover{
-  background-color: #cc0044;
+  background-color: #737373;
   color: white;
 }
 
