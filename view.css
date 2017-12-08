@@ -151,12 +151,13 @@ body {
    width: 100%
    font-size: 2.0vh;
    -webkit-transition-duration: 0.4s;
+   margin-top: 75px;
    margin-bottom: 10px;
    /*position: absolute;
    bottom: 30;
    right: 0;
    left: 0;*/
-   margin: auto;
+   /*margin: auto;*/
 }
 
 #especialidad{
