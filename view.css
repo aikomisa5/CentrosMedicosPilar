@@ -57,6 +57,26 @@ body {
   color: white;
 }
 
+.tituloLineaMap{
+  background-image: url(img/celeste.png);
+
+  text-align: center;
+  font-size: 3.5vh;
+  font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+
+  /*background-color:#0099cc;*/
+   /*opacity: 0.6;*/
+   border: solid;
+   border-color: black;
+   padding: 8px 8px;
+   -webkit-transition-duration: 0.4s;
+   border-radius: 10px;
+   width: 100%;
+  /*background-color: #ffffff;*/
+  border: 1px solid black;
+  /*filter: alpha(opacity=60); /* For IE8 and earlier */
+}
+
 .transbox{
 
   background-image: url(img/celeste.png);
@@ -334,6 +354,9 @@ body {
   display: flex;
 }
 
+#combos2{
+  display: flex;
+}
 
 #columnasTabla{
   background-color:#ff6699;
