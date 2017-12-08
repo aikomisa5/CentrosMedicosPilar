@@ -19,6 +19,15 @@ body {
 
 }
 
+#mapaCol {
+    /*height: 100vh;
+    width:  128vh;*/
+    height: 580px;
+    width: 100%;
+    box-shadow: 5px 5px 5px #888;
+
+}
+
 #anchura{
   width:  128vh;
 }
@@ -118,10 +127,10 @@ body {
    font-size: 2.0vh;
    -webkit-transition-duration: 0.4s;
    margin-bottom: 10px;
-   position: absolute;
+   /*position: absolute;
    bottom: 30;
    right: 0;
-   left: 0;
+   left: 0;*/
    margin: auto;
 }
 
@@ -221,6 +230,23 @@ body {
    width: 100%
 }
 
+#comboColectivos{
+  display: flex;
+  background-color:#ff6699;
+   border-radius: 10px;
+   border: none;
+   color: white;
+   padding: 8px 8px;
+   text-align: center;
+   text-decoration: none;
+   font-size: 2.6vh;
+   -webkit-transition-duration: 0.4s;
+   margin-bottom: 10px;
+   margin: 0;
+   box-shadow: 5px 5px 5px #888;
+   width: 100%
+}
+
 #aviso{
   display: flex;
    border: none;
@@ -236,6 +262,7 @@ body {
 @keyframes body {
   0%,30%{
     background-image: url(img/hojas.jpg);
+    width: 100%;
     opacity: 1;
   }
   31%,34%{
@@ -243,6 +270,7 @@ body {
   }
   35%, 65%{
     background-image: url(img/aurora.jpg);
+    width: 100%;
     opacity: 1;
   }
   66%,69%{
@@ -250,6 +278,7 @@ body {
   }
   70%,100%{
       background-image: url(img/road.jpg);
+      width: 100%;
       opacity: 1;
   }
 }
@@ -287,6 +316,11 @@ body {
 }
 
 #rec_mode3:hover{
+  background-color: #cc0044;
+  color: white;
+}
+
+#comboColectivos:hover{
   background-color: #cc0044;
   color: white;
 }
@@ -355,6 +389,27 @@ body {
 }
 
 #myBtn:hover {
+   background-color: #003366;
+    color: white;
+}
+
+#btnColectivo {
+   background-color:#006699;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 3vh;
+    -webkit-transition-duration: 0.4s;
+    color: white;
+    margin-left: 0px;
+    box-shadow: 5px 5px 5px #888;
+    width: 100%
+}
+
+#btnColectivo:hover {
    background-color: #003366;
     color: white;
 }

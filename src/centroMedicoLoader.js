@@ -349,6 +349,101 @@ function centrosLoader(url) {
         return options4;
       }
 
+      this.cargarComboColectivos = function(){
+        var options5 = [
+          {
+            "text"  : "Seleccione..",
+            "value" : "Seleccione",
+            "selected" : true
+          },
+          {
+            "text"  : "57",
+            "value" : "57",
+          },
+          {
+            "text"  : "501",
+            "value" : "501",
+          },
+          {
+            "text"  : "503",
+            "value" : "503",
+          },
+          {
+            "text"  : "506",
+            "value" : "506",
+          },
+          {
+            "text"  : "509",
+            "value" : "509",
+          },
+          {
+            "text"  : "510",
+            "value" : "510",
+          },
+          {
+            "text"  : "511",
+            "value" : "511",
+          },
+          {
+            "text"  : "520",
+            "value" : "520"
+          }
+        ];
+        return options5;
+      }
+
+      this.obtenerDatosColectivo = function(nombreColectivo){
+        var lineaElegida = nombreColectivo;
+        var tituloLinea = "<h2 class = \"tituloLineaMap\" id=\"fuente2\">Mapa de la línea de colectivo elegida</h2>";
+        //remueve el frame del mapa de la línea de colectivo elegida, porque si no se generan frames infinitos
+        $("iframe").remove(".mapaLinea");
+
+        $("h2").remove(".tituloLineaMap");
+
+        console.log("LA LINEA ELEGIDA ES: " + nombreColectivo);
+
+        if (lineaElegida != "Seleccione.."){
+            $("#tituloMapaLinea").append(tituloLinea).show(500);
+        if (lineaElegida == "57"){
+          var m = "<iframe class=\"mapaLinea\" src=\"https://www.google.com/maps/d/embed?mid=1eqKHZ0yOsZbCU8T8hpVsAZBBAYI\" id=\"mapaCol\"></iframe>";
+          $("#mapaColl").append(m).show(500);
+        }
+        else if (lineaElegida == "501"){
+          var n = "<iframe class=\"mapaLinea\" src=\"https://www.google.com/maps/d/embed?mid=1j4E6V3ozZovkqwRS0uh6p9bNfJ8\" id=\"mapaCol\"></iframe>";
+          $("#mapaColl").append(n).show(500);
+        }
+        else if (lineaElegida == "503"){
+          var m = "<iframe class=\"mapaLinea\" src=\"https://www.google.com/maps/d/embed?mid=1DIzCNtJeTY8LZGAgbAoj0Y3-m0w\" id=\"mapaCol\"></iframe>";
+          $("#mapaColl").append(m).show(500);
+        }
+        else if (lineaElegida == "506"){
+          var m = "<iframe class=\"mapaLinea\" src=\"https://www.google.com/maps/d/embed?mid=11CsP_Sy-SLqlQrsqGN1_MqSJKtY\" id=\"mapaCol\"></iframe>";
+          $("#mapaColl").append(m).show(500);
+        }
+        else if (lineaElegida == "509"){
+          var m = "<iframe class=\"mapaLinea\" src=\"https://www.google.com/maps/d/embed?mid=1myhCLCiFZXDdssYXy7_DTq0ZzGc\" id=\"mapaCol\"></iframe>";
+          $("#mapaColl").append(m).show(500);
+        }
+        else if (lineaElegida == "510"){
+          var m = "<iframe class=\"mapaLinea\" src=\"https://www.google.com/maps/d/embed?mid=1fi1Uzp4iqUehEXukaXPHIoyESCI\" id=\"mapaCol\"></iframe>";
+          $("#mapaColl").append(m).show(500);
+        }
+        else if (lineaElegida == "511"){
+          var m = "<iframe class=\"mapaLinea\" src=\"https://www.google.com/maps/d/embed?mid=1P-rBnxLSw7bCyZZ3GTkKnx_nPVk\" id=\"mapaCol\"></iframe>";
+          $("#mapaColl").append(m).show(500);
+        }
+        else if (lineaElegida == "520"){
+          var m = "<iframe class=\"mapaLinea\" src=\"https://www.google.com/maps/d/embed?mid=12yY1uVULxJ_pfAfCIVSd1CWO6Qk\" id=\"mapaCol\"></iframe>";
+          $("#mapaColl").append(m).show(500);
+        }
+      }
+
+        else{
+          console.log("Elegiste la opción por defecto: Seleccione..");
+        }
+
+      }
+
 
     this.loadCentros = function(map) {
         // recibe el listado de centros a procesar

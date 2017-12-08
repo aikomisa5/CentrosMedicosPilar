@@ -60,6 +60,10 @@ function bootstrap() {
 
          options4.forEach( (option) => optionList4.add( new Option(option.text, option.value, option.selected ) ));
 
+         var optionListColectivos = document.getElementById('comboColectivos').options;
+         var optionsLineas = centroMedicoLoader.cargarComboColectivos();
+
+         optionsLineas.forEach ( (option) => optionListColectivos.add (new Option (option.text, option.value, option.selected) ));
 
     $(document).ready(function() { // si se termino de cargar todo el html
         $("#myBtn").click(function() {
@@ -85,6 +89,13 @@ function bootstrap() {
           }
         });
     });
+
+    $(document).ready(function() { // si se termino de cargar todo el html
+        $("#btnColectivo").click(function() {
+              var valorLinea = obtenerValorDeLineaColectivo();
+              centroMedicoLoader.obtenerDatosColectivo(valorLinea);
+          });
+        });
 
     $(document).ready(function() { // si se termino de cargar todo el html
         $("#rec_mode").click(function() {
@@ -143,6 +154,17 @@ function bootstrap() {
       }
       else if (valor3 != "Seleccione.."){
         return valor3;
+      }
+      else {
+        return "Seleccione..";
+      }
+    }
+
+    function obtenerValorDeLineaColectivo(){
+      var valor1 = $( "#comboColectivos option:selected" ).text();
+
+      if (valor1 != "Seleccione.."){
+        return valor1;
       }
       else {
         return "Seleccione..";
