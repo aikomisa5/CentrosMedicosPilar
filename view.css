@@ -595,4 +595,13 @@ body {
   #contenedor {
       width: 100%;
   }
+  #mapid{
+    width: 80%;
+    height: 350px;
+  }
+  #mapaCol{
+    width: 80%;
+    height: 350px;
+  }
+
 }
