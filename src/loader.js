@@ -98,6 +98,12 @@ function bootstrap() {
   });
 
   $(document).ready(function() { // si se termino de cargar todo el html
+    $("#btnGaleria").click(function() {
+      window.open("galeria.html","_self");
+    });
+  });
+
+  $(document).ready(function() { // si se termino de cargar todo el html
     $("#rec_mode").click(function() {
       for (var i = 0, l = optionList2.length; i < l; i++) {
         optionList2[i].selected = optionList2[i].defaultSelected;

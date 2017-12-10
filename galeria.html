@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+
+  <meta charset="utf-8">
+
+  <!-- info requerida por bootstrap-->
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1,  minimum-scale=1.0">
+
+  <title>Galería de fotos de los centros de salud de Pilar</title>
+
+  <!-- carga del css de bootstrap con estilos predefinidos-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <!-- carga de jQuery-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- carga de bootstrap.js-->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+
+  <!-- include leaflet -->
+  <link rel="stylesheet" href="./leaflet/leaflet.css" />
+  <script src="./leaflet/leaflet.js"></script>
+
+  <!-- carga de css propio y modulos propios -->
+  <link rel="stylesheet" type="text/css" media="screen" href="galeria.css" />
+  <script src="./src/race.js"></script>
+  <script src="./src/runner.js"></script>
+  <script src="./src/position.js"></script>
+  <script src="./src/sponsor.js"></script>
+  <script src="./src/trackLoader.js"></script>
+  <script src="./src/webcamsLoader.js"></script>
+  <script src="./src/runnersLoader.js"></script>
+  <script src="./src/positionsLoader.js"></script>
+  <script src="./src/centroMedicoLoader.js"></script>
+  <script src="./src/centroMedico.js"></script>
+  <script src="./src/tipoCentro.js"></script>
+  <script src="./src/loader.js"></script>
+  <link rel="shortcut icon" type="image/png" href="img/hospitallogo.png"/>
+
+  <style>
+
+  body {
+    margin-left: 0px;
+    margin-top: 30px;
+    margin-bottom: 0px;
+
+    background-image: url("");
+    /*background-repeat: no-repeat;*/
+    background-attachment: fixed;
+    background-position: center;
+    background-size:auto;
+    margin-right: 90px;
+
+    animation: body 10s infinite;
+    animation-direction: alternate;
+    animation-duration: 450s;
+  }
+  h3 {
+    color: white;
+    text-align: center;
+  }
+  p{
+    font-weight: bold;
+    color: #ffffff;
+  }
+  h2{
+    color: white;
+  }
+  hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    /*border-top: 1px solid #ccc;*/
+    border-top: 1px solid #ffffff;
+    margin: 1em 0;
+    padding: 0;
+  }
+
+  div.gallery {
+  border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px){
+  .responsive {
+      width: 49.99999%;
+      margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px){
+  .responsive {
+      width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+  </style>
+
+
+</head>
+
+
+
+<body>
+
+<h2>Galería de fotos de los centros de salud de Pilar</h2>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="./img/hojas.jpg">
+      <img src="./img/hojas.jpg" alt="Trolltunga Norway" width="600" height="400">
+    </a>
+    <div class="desc">Lindo atardecer</div>
+  </div>
+</div>
+
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="./img/aurora.jpg">
+      <img src="./img/aurora.jpg" alt="Forest" width="600" height="400">
+    </a>
+    <div class="desc">Aurora boreal</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="./img/road.jpg">
+      <img src="./img/road.jpg" alt="Northern Lights" width="600" height="400">
+    </a>
+    <div class="desc">Camino mágico</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="./img/road.jpg">
+      <img src="./img/road.jpg" alt="Mountains" width="600" height="400">
+    </a>
+    <div class="desc">Camino mágico II</div>
+  </div>
+</div>
+
+<div class="clearfix"></div>
+
+<div style="padding:6px;">
+  <p>Estas son las fotos de todos los centros de salud ubicados en la localidad de Pilar.</p>
+  <p>Haga click en una de las imágenes/fotos para verlas mejor</p>
+</div>
+
+</body>
+
+</html>
