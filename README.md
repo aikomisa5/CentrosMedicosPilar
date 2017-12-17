@@ -1,2 +1,2 @@
 ﻿# CentrosMedicosPilar
-Proyecto de Centros Médicos del partido de Pilar!
+Proyecto sobre los centros de salud ubicados dentro del partido de Pilar!
